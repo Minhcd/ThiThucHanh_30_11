@@ -15,5 +15,6 @@ namespace ThiGK_30_11.Models
 
         public DbSet<PhongBan> PhongBans { get; set; }
         public DbSet<NhanVien> NhanViens { get; set; }
+        public DbSet<ChamCong> ChamCongs { get; set; }
     }
 }
