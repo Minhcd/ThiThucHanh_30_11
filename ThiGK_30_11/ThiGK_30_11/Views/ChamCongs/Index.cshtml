@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ThiGK_30_11.Models.ChamCong>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenNV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoNgayLamTrongThang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TongLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phongban)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nhanvien)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoNgayLamTrongThang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phongban.TenPB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nhanvien.TenNV)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MaCC">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MaCC">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaCC">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

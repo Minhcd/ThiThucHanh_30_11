@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ThiGK_30_11.Models;
 
 namespace ThiGK_30_11.Models
 {
@@ -16,5 +17,6 @@ namespace ThiGK_30_11.Models
         public DbSet<PhongBan> PhongBans { get; set; }
         public DbSet<NhanVien> NhanViens { get; set; }
         public DbSet<ChamCong> ChamCongs { get; set; }
+        public DbSet<ThiGK_30_11.Models.DiemDanh> DiemDanh { get; set; }
     }
 }
